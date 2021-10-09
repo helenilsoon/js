@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+
+}
+:root{
+    /*--cor-void :#0E0b16;*/
+    --cor-void : linear-gradient(#A613AD,#36AD95);
+    --cor-fuchia : #A239CA;
+    --cor-jewel : #36AD95;
+    --cor-stark : #E7DFDD;
+}
+
+@font-face{
+    font-family: 'Nunito-Regular';
+    src: url('font/Nunito-Regular.ttf');
+}
+
+body{
+    font-family: 'Nunito-Regular';
+    background-image: var(--cor-void);
+}
+.container{
+    display: flex;
+}
+header{
+    background:var(--cor-void);
+    width: 20%;
+    height: 100vh;
+    padding: 10px  ;
+    margin: 10px 10px 0px 0 ;
+    
+}
+header nav ul{
+    list-style: none;
+    text-transform: uppercase;
+    
+}
+header nav ul li{
+   
+} 
+header nav ul a{
+    text-decoration: none;
+    color:var(--cor-stark);
+    display: block;
+    padding: 3px 10px;
+    
+}
+header nav ul a:hover{
+    text-decoration: none;
+    background-color: var(--cor-fuchia);
+    color:var(--cor-jewel);
+}
+
+header ul ol{
+    list-style: none;
+    display: none;
+    border-radius: 2px;
+   
+    
+
+}
+header ul ol li{
+    background: var(--cor-jewel);
+    padding: 2px 20px ;
+    font-size: 10pt;
+    
+    
+    /*border: 1px solid var(--cor-fuchia);*/
+}
+header ul ol li:hover{
+    background: var(--cor-fuchia);
+    color: var(--cor-jewel);
+    
+    
+    /*border: 1px solid var(--cor-fuchia);*/
+}
+main{
+    width: 77%;
+    background:var(--cor-void);
+    padding: 20px;
+    border-left:1px solid var(--cor-stark) ;
+    
+}
+ .logo{
+    display: flex;
+    justify-content: center;   
+    color:var(--cor-stark);
+    text-align: center;
+    padding: 20px;
+    animation: move 0.1s linear 10s 5 ;
+        
+    transition: width 1s ,height 1s, transform 0.4s;
+}
+.logo:hover {
+    color:var(--cor-fuchia);
+    
+}
+@keyframes move{
+    0%{transform: rotate(0deg);}
+    45%{transform: rotate(-10deg);}
+    75%{ transform: rotate(10deg)}
+    100% {transform: rotate(0deg);
+            
+    }
+}
+main h1{
+    text-align:center;
+    color: var(--cor-stark);
+    padding: 10px;
+}
+
+h2{
+    text-align: center;
+}
+.title{
+    padding: 10px 30px 10px 30px;
+    font-size: 20pt;
+    text-align: center;
+    color: var(--cor-stark);
+}
+.videoo{
+  margin-top: 20px;
+   display: flex;
+   justify-content: center;
+}
+video{
+    border-radius: 10px;
+    
+}
+#code{   
+    background:rgb(37, 37, 37);
+    color: var(--cor-stark);
+    padding: 10px ;
+    border-radius: 5px;
+    margin: 5px;
+    
+}
+#code .comentario{
+    color:darkolivegreen;
+    padding: 10px;
+}
+pre{
+    line-height: 15pt;
+    margin: -15px;
+}
+i{
+    font-style: normal;
+}
+.tip{
+    color: lightgreen;
+}
+.func{
+    color:lawngreen;
+}
+.var{
+    color:darkturquoise;
+}
+.str{
+    color: saddlebrown;
+}

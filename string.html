@@ -1,0 +1,90 @@
+
+
+
+<div class="title"> String</div>  
+
+<div id="code">   
+    <div class="comentario">// atribuindo uma variavel </div>
+    <pre>      
+    <i class="tip">const</i> <i class="var">text</i> = <i class="str">'helenilson correa de oliveira'</i>;
+    
+    </pre>
+</div>
+
+
+<div id="code">   
+    <div class="comentario">//length = saber o tamanho de uma string </div>
+    <pre>      
+    <i class="tip">const</i> <i class="var">text</i> = <i class="var">text</i>.<i class="func">length</i>;
+    console.<i class="func">log</i>(<i class='var'>text</i>);
+
+    output:   29
+    </pre>
+</div>
+
+<div id="code">   
+    <div class="comentario">
+        // split Retorna um array quebrando a string por um delimitador
+    </div>
+    <pre>      
+    <i class="tip">const</i> <i class='var'>splitedText</i> = <i class="var">text</i>.<i class="func">split</i>(<i class="str">" "</i>);
+    console.<i class="func">log</i>(<i class='var'>text</i>);
+
+    output: [ 'helenilson', 'correa', 'de', 'oliveira' ]
+    </pre>
+</div>
+
+<div id="code">   
+    <div class="comentario">
+        // replace busca por um valor e substitui por outro (pesquisa , troca)
+    </div>
+    <pre>      
+    <i class="tip">const</i> <i class='var'>replaceText</i> = <i class="var">text</i>.<i class="func">replace</i>(<i class="str">"helenilson"," nilson"</i>);
+    console.<i class="func">log</i>(<i class='var'>text</i>);
+
+    output: nilson correa de oliveira
+    </pre>
+</div>
+
+<div id="code">   
+    <div class="comentario">
+        // slice Retorna a fatia de  um valor (-1) retorna a ultima letra da string
+    </div>
+    <pre>      
+    <i class="tip">const</i> <i class='var'>sliceText</i> = <i class="var">text</i>.<i class="func">slice</i>(-1);
+    console.<i class="func">log</i>(<i class='var'>text</i>);
+
+    output: a
+    </pre>
+    <div class="comentario">
+        // slice recebe dois parâmetros (inicion ,fim )
+    </div>
+    <pre>      
+    <i class="tip">const</i> <i class='var'>inicioFimText</i> = <i class="var">text</i>.<i class="func">slice</i>(5,20);
+    console.<i class="func">log</i>(<i class='var'>inicioFimText</i>);
+
+    output: ilson correa de
+    </pre>
+
+    <div class="comentario">
+        // retorna da seguna letra ate a ultima
+    </div>
+    <pre>      
+    <i class="tip">const</i> <i class='var'>segUltimaText</i> = <i class="var">text</i>.<i class="func">slice</i>(1);
+    console.<i class="func">log</i>(<i class='var'>segUltimaText</i>);
+
+    output: elenilson correa de oliveira
+    </pre>
+</div>
+
+<div id="code">   
+    <div class="comentario">
+        // substr retorna n caracter a parti de uma posição 
+    </div>
+    <pre>      
+    <i class="tip">const</i> <i class='var'>substrText</i> = <i class="var">text</i>.<i class="func">substr</i>(0 , 2);
+    console.<i class="func">log</i>(<i class='var'>substrText</i>);
+
+    output: he
+    </pre>
+</div>

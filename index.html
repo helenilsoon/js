@@ -1,0 +1,115 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Aprendendo Js</title>
+</head>
+<body>
+    <div class="container">
+    <header> 
+        <div class="logo">Menu</div>
+        <nav>
+
+            
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+                <li id='menuSub'><a href="#" onmouseover="subMenu('sublista')" onmouseleave="subMenu('sublista')">tipos de variaveis</a>
+                    <ol id='sublista' onmouseleave="subMenu('sublista')">
+                        <li><a href='#' onclick="loadDoc('string')">String</a></li>
+                        <li><a href='#' onclick="loadDoc('number')">Number</a></li>
+                        <li><a href='#' onclick="loadDoc('boolean')">Boolean</a></li>
+                        <li><a href='#' onclick="loadDoc('null')">Null</a></li>
+                        <li><a href='#' onclick="loadDoc('undefined')">Undefined</a></li>
+                        <li><a href='#' onclick="loadDoc('object')">Object</a></li>
+                        <li><a href='#' onclick="loadDoc('function')">Function</a></li>
+                        <li><a href='#' onclick="loadDoc('array')">Array</a></li>
+                    </ol>
+                </li>
+                <li><a href="#" onmouseover="subMenu('sublista2')" onmouseleave="subMenu('sublista2')">função</a>
+                    <ol id='sublista2' onmouseleave="subMenu('sublista2')">
+                        <li><a href="#">Mouse</a></li>
+                        <li><a href="#">teclado</a></li>
+                        <li><a href="#">window</a></li>
+                        <li><a href="#">matematica</a></li>
+                    </ol>
+                </li>
+                <li><a href="#" onmouseover="subMenu('sublista3')" onmouseleave="subMenu('sublista3')">array</a>
+                    <ol id='sublista3' onmouseleave="subMenu('sublista3')">
+                        <li><a href="#">array</a></li>
+                        <li><a href="#">array</a></li>
+                        <li><a href="#">array</a></li>
+                        <li><a href="#">array</a></li>
+                    </ol>
+                </li>
+               
+                
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+                <h1 class="logo">JavaScript</h1>
+        <div id="doc">            
+            <!-- carregando  de maneira dinamica -->
+
+            <div class="title"> Vamos aprender Javascript</div>
+            <div class="videoo">
+            <video src="think-use-your-head.mp4" autoplay loop></video>
+            </div>
+
+
+        </div>
+    </main>
+
+</div>
+    <footer>
+
+        <div class="created">
+            helenilson oliveira 
+        </div>
+    </footer>
+    
+    <script>
+
+        
+        function subMenu(id){
+            const menu = document.getElementById('menuSub');
+            let ul = document.getElementById(id).style;
+               
+                
+           
+                if ( ul.display == 'block'){
+                    ul.display ='none';
+                    ul.height = '0';
+                    ul.transition=' 1s ease-out 1s';               
+                } else {
+                    ul.display ='block';
+                    ul.height = 'auto';
+                    ul.transition=' 10s ease-out 1s'; 
+                }
+                console.log( ul.display);
+            
+            
+        }
+
+        function loadDoc(value){
+            let idCode = document.getElementById('doc');
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function(){
+                idCode.innerHTML =this.responseText;
+
+            }
+
+            xhttp.open('GET',value + '.html');
+            
+            xhttp.send();
+         
+
+        }
+    </script>
+</body>
+</html>

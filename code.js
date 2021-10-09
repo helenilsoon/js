@@ -1,0 +1,4 @@
+const code = [
+    'length',
+    'split'
+]
